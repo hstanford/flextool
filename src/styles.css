@@ -1,0 +1,56 @@
+:root {
+  --main-navbar-colour: #e8e8e8;
+  --navbar-width: 50px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  cursor: auto;
+}
+
+#app {
+    height: 100%;
+}
+
+.navbar {
+    width: var(--navbar-width);
+    height: 100%;
+    border-right: 1px black solid;
+    background-color: var(--main-navbar-colour);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.navbar-button {
+    height: calc(var(--navbar-width) - 10px);
+    width: calc(var(--navbar-width) - 10px);
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: 1px black solid;
+    margin: 5px;
+    font-size: calc(var(--navbar-width) - 25px);
+    display: flex;
+}
+
+.navbar-button.selected {
+    width: calc(var(--navbar-width) - 5px);
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.navbar-button > svg {
+    margin: auto;
+}
+
+.navbar-button.selected > svg {
+    padding-right: 5px;
+}
+
+.logo {
+    height: var(--navbar-width);
+    width: var(--navbar-width);
+    margin-bottom: 30px;
+}
