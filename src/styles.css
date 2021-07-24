@@ -7,10 +7,33 @@ html, body {
   height: 100%;
   margin: 0;
   cursor: auto;
+  font-family: Lato,sans-serif;
+  font-weight: 400;
 }
 
 #app {
     height: 100%;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.page.empty {
+    display: flex;
+}
+
+.page > .landing-message {
+    display: flex;
+    margin: auto;
+    font-size: 2em;
 }
 
 .navbar {
@@ -33,6 +56,7 @@ html, body {
     margin: 5px;
     font-size: calc(var(--navbar-width) - 25px);
     display: flex;
+    cursor: pointer;
 }
 
 .navbar-button.selected {
@@ -53,4 +77,5 @@ html, body {
     height: var(--navbar-width);
     width: var(--navbar-width);
     margin-bottom: 30px;
+    user-select: none;
 }

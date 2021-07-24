@@ -16,7 +16,18 @@ const devServer = {
 const module = {
   rules: [
      {
-        test: /\.(jpe?g|gif|png|svg)$/,
+         test: /\.ttf$/,
+         use: [
+           {
+             loader: 'ttf-loader',
+             options: {
+               name: './font/[hash].[ext]',
+             },
+           },
+         ]
+     },
+     {
+        test: /\.(jpe?g|gif|png|svg|ico)$/,
         use: [ 'file-loader' ],
      },
      {
@@ -38,8 +49,9 @@ const module = {
 };
 const plugins = [
   new HtmlWebpackPlugin({
-     template: './index.html'
-  })
+     template: './index.html',
+     favicon: './assets/favicon.ico'
+  }),
 ];
 
 export default { entry, output, devServer, module, plugins };
