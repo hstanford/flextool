@@ -21,6 +21,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "arangojs": "^7.5.0",
     "express": "^4.17.1",
+    "passport": "^0.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "ttf-loader": "^1.0.2",

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
+import Logo from './logo.js';
+
 /* Particular Apps */
 import AnnualLeave from './apps/annual_leave/navbar-button.js';
 import CodeReview from './apps/code_review/navbar-button.js';
-
-import logo from '../assets/logo.png';
 
 class Navbar extends Component{
     constructor(props) {
@@ -32,7 +32,7 @@ class Navbar extends Component{
     render(){
         return(
             <div className="navbar">
-                <img className="logo" alt='logo' src={String(logo)} />
+                <Logo parent={this} />
                 <AnnualLeave parent={this}/>
                 <CodeReview parent={this}/>
             </div>

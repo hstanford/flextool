@@ -80,3 +80,41 @@ html, body {
     margin-bottom: 30px;
     user-select: none;
 }
+
+img.logo {
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.logo.active > img.logo {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+
+.menu {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 1px black solid;
+    border-radius: 0 0 5px 0;
+    display: none;
+}
+
+.menu-item {
+    padding: 5px 10px;
+}
+
+.menu-item-icon {
+    margin-right: 5px;
+}
+
+.menu-item:not(:last-child) {
+    border-bottom: 1px gray solid;
+}
+
+.logo.active > .menu {
+    display: block;
+}
